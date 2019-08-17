@@ -13,7 +13,7 @@ DUNE module, to facilitate the build process with dunecontrol.
 To create Python bindings you should
 
 * define the cmake variable `DUNE_PYBINDXI_PYTHON_VERSION` (optional)
-* `include(DunePybindxiUtils)` in your CMakeLists.txt
+* `include(DuneXtPybindxiUtils)` in your CMakeLists.txt
 * call `dune_pybindxi_add_module(module, sources)`, where sources is one or several C++
   source files
 * call `target_link_dune_default_libraries(module)`

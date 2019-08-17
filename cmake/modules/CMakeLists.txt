@@ -6,8 +6,8 @@
 #   Felix Schindler (2016)
 
 set(modules
-    DunePybindxiMacros.cmake
-    DunePybindxiUtils.cmake
+    DuneXtMacros.cmake
+    DuneXtPybindxiUtils.cmake
     FindPythonLibsNew.cmake)
 
 install(FILES ${modules} DESTINATION ${DUNE_INSTALL_MODULEDIR})

@@ -40,6 +40,6 @@ if(NOT MSVC AND NOT DUNE_PYBINDXI_CPP_STANDARD)
           "C++ standard flag, e.g. -std=c++11 or -std=c++14. Defaults to C++11." FORCE)
 endif()
 
-include(DunePybindxiUtils)
+include(DuneXtPybindxiUtils)
 include(DunePybindxiHelper)
 

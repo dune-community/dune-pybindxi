@@ -5,4 +5,4 @@
 # Authors:
 #   Felix Schindler (2016)
 
-add_subdirectory(pybindxi)
+add_subdirectory(xt)

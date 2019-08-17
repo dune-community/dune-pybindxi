@@ -5,7 +5,7 @@
 # Authors:
 #   Felix Schindler (2016)
 
-dune_library_add_sources(dunepybindxi SOURCES interpreter.cc)
+dune_library_add_sources(dunext SOURCES python/interpreter.cc)
 
 install(FILES
         attr.h
