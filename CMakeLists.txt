@@ -6,7 +6,7 @@
 #   Felix Schindler (2016)
 
 cmake_minimum_required(VERSION 3.1)
-project(dune-pybindxi CXX)
+project(dune-xt CXX)
 
 if(NOT (dune-common_DIR OR dune-common_ROOT OR
       "${CMAKE_PREFIX_PATH}" MATCHES ".*dune-common.*"))
@@ -27,36 +27,36 @@ include(DuneMacros)
 dune_project()
 
 if(NOT (CMAKE_VERSION VERSION_LESS 3.0))  # CMake >= 3.0
-  dune_enable_all_packages(INCLUDE_DIRS ${dune-pybindxi_SOURCE_DIR}/dune
-                           MODULE_LIBRARIES dunepybindxi dunepybindxiinterface dunepybindximodule dunepybindxiembed)
+  dune_enable_all_packages(INCLUDE_DIRS ${dune-xt_SOURCE_DIR}/dune
+                           MODULE_LIBRARIES dunext dunextinterface dunextmodule dunextembed)
   # The -fsized-deallocation flag is not needed anymore in newer versions of pybind11. 
   # TODO: Remove once we update pybind11.
   if ("${CMAKE_CXX_COMPILER_ID}" STREQUAL "Clang")
-    target_compile_options(dunepybindxi INTERFACE -fsized-deallocation)
+    target_compile_options(dunext INTERFACE -fsized-deallocation)
   endif()
   # Build an interface library target:
-  add_library(pybind11::pybind11 ALIAS dunepybindxiinterface)  # to match exported target
-  target_include_directories(dunepybindxiinterface INTERFACE $<BUILD_INTERFACE:${PYBIND11_INCLUDE_DIR}>
+  add_library(pybind11::pybind11 ALIAS dunextinterface)  # to match exported target
+  target_include_directories(dunextinterface INTERFACE $<BUILD_INTERFACE:${PYBIND11_INCLUDE_DIR}>
                                                 $<BUILD_INTERFACE:${PYTHON_INCLUDE_DIRS}>
                                                 $<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}>)
-  target_compile_options(dunepybindxiinterface INTERFACE $<BUILD_INTERFACE:${PYBIND11_CPP_STANDARD}>)
+  target_compile_options(dunextinterface INTERFACE $<BUILD_INTERFACE:${PYBIND11_CPP_STANDARD}>)
 
-  add_library(pybind11::module ALIAS dunepybindximodule)
+  add_library(pybind11::module ALIAS dunextmodule)
   if(NOT MSVC)
-    target_compile_options(dunepybindximodule INTERFACE -fvisibility=hidden)
+    target_compile_options(dunextmodule INTERFACE -fvisibility=hidden)
   endif()
-  target_link_libraries(dunepybindximodule INTERFACE pybind11::pybind11)
+  target_link_libraries(dunextmodule INTERFACE pybind11::pybind11)
   if(WIN32 OR CYGWIN)
-    target_link_libraries(dunepybindximodule INTERFACE $<BUILD_INTERFACE:${PYTHON_LIBRARIES}>)
+    target_link_libraries(dunextmodule INTERFACE $<BUILD_INTERFACE:${PYTHON_LIBRARIES}>)
   elseif(APPLE)
-    target_link_libraries(dunepybindximodule INTERFACE "-undefined dynamic_lookup")
+    target_link_libraries(dunextmodule INTERFACE "-undefined dynamic_lookup")
   endif()
 
-  target_link_libraries(dunepybindxiembed INTERFACE pybind11::pybind11 $<BUILD_INTERFACE:${PYTHON_LIBRARIES}>)
-  add_library(pybind11::embed ALIAS dunepybindxiembed)
-  target_link_libraries(dunepybindxi dunepybindxiembed)
+  target_link_libraries(dunextembed INTERFACE pybind11::pybind11 $<BUILD_INTERFACE:${PYTHON_LIBRARIES}>)
+  add_library(pybind11::embed ALIAS dunextembed)
+  target_link_libraries(dunext dunextembed)
 else()
-  dune_enable_all_packages(INCLUDE_DIRS ${dune-pybindxi_SOURCE_DIR}/dune)
+  dune_enable_all_packages(INCLUDE_DIRS ${dune-xt_SOURCE_DIR}/dune)
 endif()
 
 add_subdirectory(dune)

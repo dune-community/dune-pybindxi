@@ -8,8 +8,8 @@ DEPENDENCIES=@REQUIRES@
 
 Name: @PACKAGE_NAME@
 Version: @VERSION@
-Description: dune-pybindxi module
-URL: http://github.com/dune-community/dune-pybindxi.git
+Description: dune-xt module
+URL: http://github.com/dune-community/dune-xt.git
 Requires: dune-common dune-python
 Libs: -L${libdir}
 Cflags: -I${includedir}

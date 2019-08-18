@@ -10,7 +10,7 @@
 ################################
 
 #Name of the module
-Module: dune-pybindxi
+Module: dune-xt
 Version: 18.11-dev
 Maintainer: felix.schindler@wwu.de
 #depending on

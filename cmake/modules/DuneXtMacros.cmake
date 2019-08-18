@@ -13,7 +13,7 @@ dune_python_require_version(3.4)
 set(CMAKE_POSITION_INDEPENDENT_CODE ON)
 
 # Add a CMake parameter for choosing a desired Python version
-set(DUNE_PYBINDXI_PYTHON_VERSION "" CACHE STRING "Python version to use for dune-pybindxi")
+set(DUNE_PYBINDXI_PYTHON_VERSION "" CACHE STRING "Python version to use for dune-xt")
 
 set(PYTHON_EXECUTABLE ${DUNE_PYTHON_VIRTUALENV_INTERPRETER})
 find_package(PythonLibsNew ${PYBIND11_PYTHON_VERSION} REQUIRED)
@@ -41,5 +41,4 @@ if(NOT MSVC AND NOT DUNE_PYBINDXI_CPP_STANDARD)
 endif()
 
 include(DuneXtPybindxiUtils)
-include(DunePybindxiHelper)
 

@@ -1,4 +1,4 @@
-/* begin dune-pybindxi
+/* begin dune-xt
    put the definitions for config.h specific to
    your project here. Everything above will be
    overwritten
@@ -28,18 +28,18 @@
 
 /* end private */
 
-/* Define to the version of dune-pybindxi */
+/* Define to the version of dune-xt */
 #define DUNE_PYBINDXI_VERSION "@DUNE_PYBINDXI_VERSION@"
 
-/* Define to the major version of dune-pybindxi */
+/* Define to the major version of dune-xt */
 #define DUNE_PYBINDXI_VERSION_MAJOR @DUNE_PYBINDXI_VERSION_MAJOR@
 
-/* Define to the minor version of dune-pybindxi */
+/* Define to the minor version of dune-xt */
 #define DUNE_PYBINDXI_VERSION_MINOR @DUNE_PYBINDXI_VERSION_MINOR@
 
-/* Define to the revision of dune-pybindxi */
+/* Define to the revision of dune-xt */
 #define DUNE_PYBINDXI_VERSION_REVISION @DUNE_PYBINDXI_VERSION_REVISION@
 
-/* end dune-pybindxi
+/* end dune-xt
    Everything below here will be overwritten
 */

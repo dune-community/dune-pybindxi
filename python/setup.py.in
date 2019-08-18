@@ -1,9 +1,9 @@
 #!/usr/bin/env python
 #
 # ~~~
-# This file is part of the dune-pybindxi project:
-#   https://github.com/dune-community/dune-pybindxi
-# Copyright 2009-2018 dune-pybindxi developers and contributors. All rights reserved.
+# This file is part of the dune-xt project:
+#   https://github.com/dune-community/dune-xt
+# Copyright 2009-2018 dune-xt developers and contributors. All rights reserved.
 # License: Dual licensed as BSD 2-Clause License (http://opensource.org/licenses/BSD-2-Clause)
 # Authors:
 #   Rene Milk       (2018)
@@ -14,7 +14,7 @@
 
 '''This is currently just a dummy package, used for nothing
 else than to workaround having mpi4py already present at configure time for
-dune-pybindxi
+dune-xt
 '''
 
 import sys
@@ -30,7 +30,7 @@ setup(name='dune.pybindxi',
       description='Python for Dune-Xt',
       author='The dune-xt devs',
       author_email='dune-xt-dev@listserv.uni-muenster.de',
-      url='https://github.com/dune-community/dune-pybindxi',
+      url='https://github.com/dune-community/dune-xt',
       packages = find_packages(),
       zip_safe = 0,
       package_data = {'': ['*.so']},
