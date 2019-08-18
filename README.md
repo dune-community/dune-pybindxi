@@ -1,6 +1,6 @@
 ```
-This file is part of the dune-pybindx1 project:
-  https://github.com/dune-community/dune-pybindx1
+This file is part of the dune-xt project:
+  https://github.com/dune-community/dune-xt
 The copyright lies with the authors of this file (see below).
 License: BSD 2-Clause License (http://opensource.org/licenses/BSD-2-Clause)
 Authors:
@@ -20,7 +20,7 @@ To create Python bindings you should
 
 In your sources, you may include the pybind11 header `pybind11/foo.h` as
 ```
-#include <dune/pybindxi/foo.h>
+#include <python/pybindxi/foo.h>
 ```
 
 For further documentation on pybind1 and Python bindings,

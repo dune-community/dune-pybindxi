@@ -1,5 +1,5 @@
-# This file is part of the dune-pybindx1 project:
-#   https://github.com/dune-community/dune-pybindx1
+# This file is part of the dune-xt project:
+#   https://github.com/dune-community/dune-xt
 # The copyright lies with the authors of this file (see below).
 # License: BSD 2-Clause License (http://opensource.org/licenses/BSD-2-Clause)
 # Authors:
